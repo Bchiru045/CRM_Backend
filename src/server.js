@@ -26,10 +26,7 @@ app.use(
   })
 );
 
-// Routes
-app.get("/", (req, res) => {
-  res.send("Hello from backend!");
-});
+
 
 app.use("/api/v1", mainRouter);
 

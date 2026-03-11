@@ -4,7 +4,7 @@ import AppError from "../utils/AppError.js";
 import { createToken } from "../utils/jwt.js";
 
 export const createAdmin = async (data, givenPassKey) => {
-  const isValidPassKey = givenPassKey === passKey;
+  const isValidPassKey = givenPassKey && givenPassKey.trim() === passKey;
   if (!isValidPassKey) {
     throw new AppError(
       "Empty or invalid passkey provided for admin creation in authorization header",
