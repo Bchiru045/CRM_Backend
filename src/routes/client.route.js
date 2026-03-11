@@ -1,6 +1,6 @@
 import { Router } from "express";
 import * as clientController from "../controllers/client.controller.js";
-import authMiddleware from "../middleware/authmiddleware.js";
+import authMiddleware from "../middleware/authMiddleware.js";
 import validate from "../middleware/validate.js";
 import {
   clientRegisterSchema,
